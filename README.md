@@ -33,7 +33,7 @@ mkdir -p playbooks/.agents/skills
 git clone https://gitlab.cee.redhat.com/rjeffman/ansible-freeipa-skill \
     playbooks/.agents/skills/ansible-freeipa-skill
 cd playbooks
-gemini-cli Hello
+gemini Hello
 ```
 
 You can verify the loaded skills by running `/skills` in the AI agent
