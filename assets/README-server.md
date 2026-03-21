@@ -48,7 +48,7 @@ Example playbook to make sure server "server.example.com" is already present in 
   become: yes
 
   tasks:
-  - ipaserver:
+  - freeipa.ansible_freeipa.ipaserver:
       ipaadmin_password: SomeADMINpassword
       name: server.example.com
 ```
@@ -65,7 +65,7 @@ Example playbook to make sure server "server.example.com" has location mylocatio
   become: yes
 
   tasks:
-  - ipaserver:
+  - freeipa.ansible_freeipa.ipaserver:
       ipaadmin_password: SomeADMINpassword
       name: server.example.com
       location: mylocation
@@ -81,7 +81,7 @@ Example playbook to make sure server "server.example.com" does not have a locati
   become: yes
 
   tasks:
-  - ipaserver:
+  - freeipa.ansible_freeipa.ipaserver:
       ipaadmin_password: SomeADMINpassword
       name: server.example.com
       location: ""
@@ -97,7 +97,7 @@ Example playbook to make sure server "server.example.com" has service weight 1:
   become: yes
 
   tasks:
-  - ipaserver:
+  - freeipa.ansible_freeipa.ipaserver:
       ipaadmin_password: SomeADMINpassword
       name: server.example.com
       service_weight: 1
@@ -113,7 +113,7 @@ Example playbook to make sure server "server.example.com" does not have a servic
   become: yes
 
   tasks:
-  - ipaserver:
+  - freeipa.ansible_freeipa.ipaserver:
       ipaadmin_password: SomeADMINpassword
       name: server.example.com
       service_weight: -1
@@ -129,7 +129,7 @@ Example playbook to make sure server "server.example.com" is hidden:
   become: yes
 
   tasks:
-  - ipaserver:
+  - freeipa.ansible_freeipa.ipaserver:
       ipaadmin_password: SomeADMINpassword
       name: server.example.com
       hidden: yes
@@ -145,7 +145,7 @@ Example playbook to make sure server "server.example.com" is not hidden:
   become: yes
 
   tasks:
-  - ipaserver:
+  - freeipa.ansible_freeipa.ipaserver:
       ipaadmin_password: SomeADMINpassword
       name: server.example.com
       hidden: no
@@ -161,7 +161,7 @@ Example playbook to make sure server "server.example.com" is absent from the top
   become: yes
 
   tasks:
-  - ipaserver:
+  - freeipa.ansible_freeipa.ipaserver:
       ipaadmin_password: SomeADMINpassword
       name: server.example.com
       state: absent
@@ -177,7 +177,7 @@ Example playbook to make sure server "server.example.com" is absent from the top
   become: yes
 
   tasks:
-  - ipaserver:
+  - freeipa.ansible_freeipa.ipaserver:
       ipaadmin_password: SomeADMINpassword
       name: server.example.com
       continue: yes
@@ -194,7 +194,7 @@ Example playbook to make sure server "server.example.com" is absent from the top
   become: yes
 
   tasks:
-  - ipaserver:
+  - freeipa.ansible_freeipa.ipaserver:
       ipaadmin_password: SomeADMINpassword
       name: server.example.com
       ignore_last_of_role: yes
@@ -211,7 +211,7 @@ Example playbook to make sure server "server.example.com" is absent from the top
   become: yes
 
   tasks:
-  - ipaserver:
+  - freeipa.ansible_freeipa.ipaserver:
       ipaadmin_password: SomeADMINpassword
       name: server.example.com
       ignore_topology_disconnect: yes
@@ -228,7 +228,7 @@ Example playbook to make sure server "server.example.com" is absent from the dom
   become: yes
 
   tasks:
-  - ipaserver:
+  - freeipa.ansible_freeipa.ipaserver:
       ipaadmin_password: SomeADMINpassword
       name: server.example.com
       force: yes

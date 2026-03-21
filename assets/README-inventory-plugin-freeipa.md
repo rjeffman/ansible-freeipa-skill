@@ -49,7 +49,7 @@ Example inventory file "freeipa.yml":
 
 ```yml
 ---
-plugin: freeipa
+plugin: freeipa.ansible_freeipa.freeipa
 server: server.ipa.local
 ipaadmin_password: SomeADMINpassword
 ```
@@ -58,7 +58,7 @@ Example inventory file "freeipa.yml" with server TLS certificate verification us
 
 ```yml
 ---
-plugin: freeipa
+plugin: freeipa.ansible_freeipa.freeipa
 server: server.ipa.local
 ipaadmin_password: SomeADMINpassword
 verify: ca.crt
@@ -78,7 +78,7 @@ Example inventory file "freeipa.yml" for use with `playbooks/config/retrieve-con
 
 ```yml
 ---
-plugin: freeipa
+plugin: freeipa.ansible_freeipa.freeipa
 server: server.ipa.local
 ipaadmin_password: SomeADMINpassword
 inventory_group: ipaserver

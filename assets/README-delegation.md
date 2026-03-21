@@ -49,7 +49,7 @@ Example playbook to make sure delegation "basic manager attributes" is present:
   become: yes
 
   tasks:
-  - ipadelegation:
+  - freeipa.ansible_freeipa.ipadelegation:
       ipaadmin_password: SomeADMINpassword
       name: "basic manager attributes"
       permission: read
@@ -70,7 +70,7 @@ Example playbook to make sure delegation "basic manager attributes" is absent:
   become: yes
 
   tasks:
-  - ipadelegation:
+  - freeipa.ansible_freeipa.ipadelegation:
       ipaadmin_password: SomeADMINpassword
       name: "basic manager attributes"
       state: absent
@@ -86,7 +86,7 @@ Example playbook to make sure "basic manager attributes" member attributes emplo
   become: yes
 
   tasks:
-  - ipadelegation:
+  - freeipa.ansible_freeipa.ipadelegation:
       ipaadmin_password: SomeADMINpassword
       name: "basic manager attributes"
       attribute:
@@ -105,7 +105,7 @@ Example playbook to make sure "basic manager attributes" member attributes emplo
   become: yes
 
   tasks:
-  - ipadelegation:
+  - freeipa.ansible_freeipa.ipadelegation:
       ipaadmin_password: SomeADMINpassword
       name: "basic manager attributes"
       attribute:
@@ -125,7 +125,7 @@ Example playbook to make sure delegation "basic manager attributes" is absent:
   become: yes
 
   tasks:
-  - ipadelegation:
+  - freeipa.ansible_freeipa.ipadelegation:
       ipaadmin_password: SomeADMINpassword
       name: "basic manager attributes"
       state: absent

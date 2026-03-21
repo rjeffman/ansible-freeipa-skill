@@ -51,7 +51,7 @@ Example playbook to request a new certificate for a service:
 
   tasks:
   - name: Request a certificate for a web server
-    ipacert:
+    freeipa.ansible_freeipa.ipacert:
       ipaadmin_password: SomeADMINpassword
       state: requested
       csr: |
@@ -74,7 +74,7 @@ Example playbook to revoke an existing certificate:
 
   tasks:
   - name Revoke a certificate
-    ipacert:
+    freeipa.ansible_freeipa.ipacert:
       ipaadmin_password: SomeADMINpassword
       serial_number: 123456789
       reason: 5
@@ -90,7 +90,7 @@ When revoking a certificate a mnemonic can also be used to set the revocation re
 
   tasks:
   - name Revoke a certificate
-    ipacert:
+    freeipa.ansible_freeipa.ipacert:
       ipaadmin_password: SomeADMINpassword
       serial_number: 123456789
       reason: cessationOfOperation
@@ -106,7 +106,7 @@ Example to hold a certificate (alias for revoking a certificate with reason `cer
 
   tasks:
   - name: Hold certificate
-    ipacert:
+    freeipa.ansible_freeipa.ipacert:
       ipaadmin_password: SomeADMINpassword
       serial_number: 0xAB1234
       state: held
@@ -121,7 +121,7 @@ Example playbook to release hold of certificate (may be used with any revoked ce
 
   tasks:
   - name: Take a revoked certificate off hold
-    ipacert:
+    freeipa.ansible_freeipa.ipacert:
       ipaadmin_password: SomeADMINpassword
       serial_number: 0xAB1234
       state: released
@@ -136,7 +136,7 @@ Example playbook to retrieve a certificate and save it to a file in the target n
 
   tasks:
   - name: Retrieve a certificate and save it to file 'cert.pem'
-    ipacert:
+    freeipa.ansible_freeipa.ipacert:
       ipaadmin_password: SomeADMINpassword
       certificate_out: cert.pem
       state: retrieved

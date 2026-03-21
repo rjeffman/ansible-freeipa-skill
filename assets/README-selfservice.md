@@ -49,7 +49,7 @@ Example playbook to make sure selfservice "Users can manage their own name detai
   become: yes
 
   tasks:
-  - ipaselfservice:
+  - freeipa.ansible_freeipa.ipaselfservice:
       ipaadmin_password: SomeADMINpassword
       name: "Users can manage their own name details"
       permission: read
@@ -68,7 +68,7 @@ Example playbook to make sure selfservice "Users can manage their own name detai
   become: yes
 
   tasks:
-  - ipaselfservice:
+  - freeipa.ansible_freeipa.ipaselfservice:
       ipaadmin_password: SomeADMINpassword
       name: "Users can manage their own name details"
       state: absent
@@ -84,7 +84,7 @@ Example playbook to make sure "Users can manage their own name details" member a
   become: yes
 
   tasks:
-  - ipaselfservice:
+  - freeipa.ansible_freeipa.ipaselfservice:
       ipaadmin_password: SomeADMINpassword
       name: "Users can manage their own name details"
       attribute:
@@ -102,7 +102,7 @@ Example playbook to make sure "Users can manage their own name details" member a
   become: yes
 
   tasks:
-  - ipaselfservice:
+  - freeipa.ansible_freeipa.ipaselfservice:
       ipaadmin_password: SomeADMINpassword
       name: "Users can manage their own name details"
       attribute:
@@ -121,7 +121,7 @@ Example playbook to make sure selfservice "Users can manage their own name detai
   become: yes
 
   tasks:
-  - ipaselfservice:
+  - freeipa.ansible_freeipa.ipaselfservice:
       ipaadmin_password: SomeADMINpassword
       name: "Users can manage their own name details"
       state: absent

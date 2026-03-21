@@ -51,7 +51,7 @@ Example playbook to make sure sudocmd exists:
 
   tasks:
   # Ensure sudocmd is present
-  - ipasudocmd:
+  - freeipa.ansible_freeipa.ipasudocmd:
       ipaadmin_password: SomeADMINpassword
       name: /usr/bin/su
       state: present
@@ -67,7 +67,7 @@ Example playbook to make sure sudocmd is absent:
 
   tasks:
   # Ensure sudocmd are absent
-  - ipasudocmd:
+  - freeipa.ansible_freeipa.ipasudocmd:
       ipaadmin_password: SomeADMINpassword
       name: /usr/bin/su
       state: absent

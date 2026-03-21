@@ -50,7 +50,7 @@ Omitting the two_way option implies the default of one-way
 
   tasks:
   - name: ensure the one-way trust present
-    ipatrust:
+    freeipa.ansible_freeipa.ipatrust:
       realm: ad.example.test
       admin: Administrator
       password: secret_password
@@ -67,7 +67,7 @@ Example playbook to ensure a two-way trust is present using a shared-secret:
 
   tasks:
   - name: ensure the two-way trust is present
-    ipatrust:
+    freeipa.ansible_freeipa.ipatrust:
       realm: ad.example.test
       trust_secret: my_share_Secret
       two_way: True
@@ -84,7 +84,7 @@ Example playbook to ensure a trust is absent:
 
   tasks:
   - name: ensure the trust is absent
-    ipatrust:
+    freeipa.ansible_freeipa.ipatrust:
       realm: ad.example.test
       state: absent
 ```

@@ -51,7 +51,7 @@ Example playbook to read config options:
   become: true
   tasks:
     - name: return current values of the global configuration options
-      ipaconfig:
+      freeipa.ansible_freeipa.ipaconfig:
         ipaadmin_password: password
       register: result
     - name: display default login shell
@@ -59,7 +59,7 @@ Example playbook to read config options:
         msg: '{{ result.config.defaultshell }}'
 
     - name: ensure defaultloginshell and maxusernamelength are set as required
-      ipaconfig:
+      freeipa.ansible_freeipa.ipaconfig:
         ipaadmin_password: password
         defaultshell: /bin/bash
         maxusername: 64
@@ -75,7 +75,7 @@ Example playbook to set global configuration options:
   become: true
   tasks:
     - name: set defaultlogin and maxusername
-      ipaconfig:
+      freeipa.ansible_freeipa.ipaconfig:
         ipaadmin_password: password
         defaultlogin: /bin/bash
         maxusername: 64
@@ -93,7 +93,7 @@ Example playbook to enable SID and generate users and groups SIDs:
 
   tasks:
     - name: Enable SID and generate users and groups SIDS
-      ipaconfig:
+      freeipa.ansible_freeipa.ipaconfig:
         ipaadmin_password: SomeADMINpassword
         enable_sid: yes
         add_sids: yes
@@ -110,7 +110,7 @@ Example playbook to change IPA domain NetBIOS name:
 
   tasks:
     - name: Set IPA domain netbios name
-      ipaconfig:
+      freeipa.ansible_freeipa.ipaconfig:
         ipaadmin_password: SomeADMINpassword
         enable_sid: yes
         netbios_name: IPADOM

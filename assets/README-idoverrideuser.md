@@ -56,7 +56,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview.
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -73,7 +73,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview with description
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -91,7 +91,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview without description
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -109,7 +109,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview with internal name test_123_user
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -127,7 +127,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview without internal name
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -145,7 +145,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview with uid 20001
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -163,7 +163,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview without uid
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -181,7 +181,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview with gecos "Gecos Test"
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -199,7 +199,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview without gecos
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -217,7 +217,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview with gidnumber
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -235,7 +235,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview without gidnumber
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -253,7 +253,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview with homedir /Users
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -271,7 +271,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview without homedir
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -289,7 +289,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview with shell
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -307,7 +307,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview without shell
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -325,7 +325,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview with sshpubkey
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -344,7 +344,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview without sshpubkey
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -362,7 +362,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview with 1 certificate
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -381,7 +381,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview with 3 certificate members
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -403,7 +403,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview without 2 certificate members
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -425,7 +425,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview without certificates
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -443,7 +443,7 @@ Example playbook to make sure test user test_user is present in idview test_idvi
 
   tasks:
   - name: Ensure test user test_user is present in idview test_idview with fallback_to_ldap enabled
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user
@@ -461,7 +461,7 @@ Example playbook to make sure test user test_user is absent in idview test_idvie
 
   tasks:
   - name: Ensure test user test_user is absent in idview test_idview
-    ipaidoverrideuser:
+    freeipa.ansible_freeipa.ipaidoverrideuser:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_user

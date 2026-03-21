@@ -47,7 +47,7 @@ Example playbook to ensure presence of an automount key:
 
   tasks:
   - name: ensure automount key TestKey is present
-    ipaautomountkey:
+    freeipa.ansible_freeipa.ipaautomountkey:
       ipaadmin_password: SomeADMINpassword
       location: TestLocation
       mapname: TestMap
@@ -65,7 +65,7 @@ Example playbook to rename an automount map:
 
   tasks:
   - name: ensure aumount key TestKey is renamed to NewKeyName
-    ipaautomountkey:
+    freeipa.ansible_freeipa.ipaautomountkey:
       ipaadmin_password: password01
       automountlocationcn: TestLocation
       automountmapname: TestMap
@@ -83,7 +83,7 @@ Example playbook to ensure an automount key is absent:
 
   tasks:
   - name: ensure automount key TestKey is absent
-    ipaautomountkey:
+    freeipa.ansible_freeipa.ipaautomountkey:
       ipaadmin_password: SomeADMINpassword
       location: TestLocation
       mapname: TestMap

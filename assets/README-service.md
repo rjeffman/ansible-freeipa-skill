@@ -53,7 +53,7 @@ Example playbook to make sure service is present:
 
   tasks:
   # Ensure service is present
-  - ipaservice:
+  - freeipa.ansible_freeipa.ipaservice:
       ipaadmin_password: SomeADMINpassword
       name: HTTP/www.example.com
       certificate: |
@@ -93,7 +93,7 @@ Example playbook to make sure service is absent:
 
   tasks:
   # Ensure service is present
-  - ipaservice:
+  - freeipa.ansible_freeipa.ipaservice:
       ipaadmin_password: SomeADMINpassword
       name: HTTP/www.example.com
       state: absent
@@ -111,7 +111,7 @@ Example playbook to make sure service is disabled:
 
   tasks:
   # Ensure service is present
-  - ipaservice:
+  - freeipa.ansible_freeipa.ipaservice:
       ipaadmin_password: SomeADMINpassword
       name: HTTP/www.example.com
       state: disabled
@@ -128,7 +128,7 @@ Example playbook to add a service even if the host object does not exist, but on
 
   tasks:
   # Ensure service is present
-  - ipaservice:
+  - freeipa.ansible_freeipa.ipaservice:
       ipaadmin_password: SomeADMINpassword
       name: HTTP/www.example.com
       skip_host_check: true
@@ -146,7 +146,7 @@ Example playbook to add a service if it does have a DNS entry, but host object e
 
   tasks:
   # Ensure service is present
-  - ipaservice:
+  - freeipa.ansible_freeipa.ipaservice:
       ipaadmin_password: SomeADMINpassword
       name: HTTP/www.example.com
       skip_host_check: false
@@ -164,7 +164,7 @@ Example playbook to ensure service has a certificate:
 
   tasks:
   # Ensure service member certificate is present.
-  - ipaservice:
+  - freeipa.ansible_freeipa.ipaservice:
       ipaadmin_password: SomeADMINpassword
       name: HTTP/www.example.com
       certificate: |
@@ -198,7 +198,7 @@ Example playbook to add a principal to the service:
 
   tasks:
     # Principal host/principal.example.com present in service.
-    - ipaservice:
+    - freeipa.ansible_freeipa.ipaservice:
         ipaadmin_password: SomeADMINpassword
         name: HTTP/www.example.com
         principal: host/principal.example.com
@@ -216,7 +216,7 @@ Example playbook to enable a host to manage service:
 
   tasks:
     # Ensure host can manage service, again.
-    - ipaservice:
+    - freeipa.ansible_freeipa.ipaservice:
         ipaadmin_password: SomeADMINpassword
         name: HTTP/www.example.com
         host: host1.example.com
@@ -234,7 +234,7 @@ Example playbook to allow users, groups, hosts or hostgroups to create a keytab 
 
   tasks:
     # Allow users, groups, hosts or host groups to create a keytab of this service.
-    - ipaservice:
+    - freeipa.ansible_freeipa.ipaservice:
         ipaadmin_password: SomeADMINpassword
         name: HTTP/www.example.com
         allow_create_keytab_user:
@@ -263,7 +263,7 @@ Example playbook to allow users, groups, hosts or hostgroups to retrieve a keyta
 
   tasks:
     # Allow users, groups, hosts or host groups to retrieve a keytab of this service.
-    - ipaservice:
+    - freeipa.ansible_freeipa.ipaservice:
         ipaadmin_password: SomeADMINpassword
         name: HTTP/www.example.com
         allow_retrieve_keytab_user:
@@ -291,7 +291,7 @@ Example playbook to ensure presence of serveral services in a single task:
 
   tasks:
   - name: Ensure services are present
-    ipaservice:
+    freeipa.ansible_freeipa.ipaservice:
       ipaadmin_password: SomeADMINpassword
       services:
       - name: HTTP/www.example.com
@@ -330,7 +330,7 @@ Example playbook to ensure presence of serveral services in a single task with `
 
   tasks:
     - name: Ensure service host members are present
-      ipaservice:
+      freeipa.ansible_freeipa.ipaservice:
         ipaadmin_password: SomeADMINpassword
         services:
         - name: HTTP/www1.example.com

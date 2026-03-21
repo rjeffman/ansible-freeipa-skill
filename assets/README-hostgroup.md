@@ -53,7 +53,7 @@ Example playbook to make sure hostgroup databases exists:
 
   tasks:
   # Ensure host-group databases is present
-  - ipahostgroup:
+  - freeipa.ansible_freeipa.ipahostgroup:
       ipaadmin_password: SomeADMINpassword
       name: databases
       host:
@@ -73,7 +73,7 @@ Example playbook to make sure that hosts and hostgroups are present in existing 
 
   tasks:
   # Ensure hosts and hostgroups are present in existing databases hostgroup
-  - ipahostgroup:
+  - freeipa.ansible_freeipa.ipahostgroup:
       ipaadmin_password: SomeADMINpassword
       name: databases
       host:
@@ -95,7 +95,7 @@ Example playbook to make sure hosts and hostgroups are absent in databases hostg
 
   tasks:
   # Ensure hosts and hostgroups are absent in databases hostgroup
-  - ipahostgroup:
+  - freeipa.ansible_freeipa.ipahostgroup:
       ipaadmin_password: SomeADMINpassword
       name: databases
       host:
@@ -117,7 +117,7 @@ Example playbook to rename an existing playbook:
 
   tasks:
   # Ensure host-group databases is absent
-  - ipahostgroup:
+  - freeipa.ansible_freeipa.ipahostgroup:
       ipaadmin_password: SomeADMINpassword
       name: databases
       rename: datalake
@@ -134,7 +134,7 @@ Example playbook to make sure host-group databases is absent:
 
   tasks:
   # Ensure host-group databases is absent
-  - ipahostgroup:
+  - freeipa.ansible_freeipa.ipahostgroup:
       ipaadmin_password: SomeADMINpassword
       name: databases
       state: absent

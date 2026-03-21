@@ -63,7 +63,7 @@ Example playbook to ensure a local domain idrange is present:
 
   tasks:
   - name: Ensure an ID Range for the local domain is present.
-    ipaidrange:
+    freeipa.ansible_freeipa.ipaidrange:
       ipaadmin_password: SomeADMINpassword
       name: local_domain_id_range
       base_id: 150000
@@ -82,7 +82,7 @@ Example playbook to ensure an AD-trust idrange is present, with range type 'trus
 
   tasks:
   - name: Ensure AD-trust idrange is present
-    ipaidrange:
+    freeipa.ansible_freeipa.ipaidrange:
       ipaadmin_password: SomeADMINpassword
       name: ad_id_range
       base_id: 150000000
@@ -101,7 +101,7 @@ Example playbook to ensure an AD-trust idrange is present, with range type 'trus
 
   tasks:
   - name: Ensure AD-trust idrange is present
-    ipaidrange:
+    freeipa.ansible_freeipa.ipaidrange:
       name: ad_posix_id_range
       base_id: 150000000
       range_size: 200000
@@ -119,7 +119,7 @@ Example playbook to ensure an AD-trust idrange has auto creation of groups set t
 
   tasks:
   - name: Modify AD-trust idrange 'auto_private_groups'
-    ipaidrange:
+    freeipa.ansible_freeipa.ipaidrange:
       ipaadmin_password: SomeADMINpassword
       ipaapi_context: "{{ ipa_context | default(omit) }}"
       name: ad_id_range
@@ -136,7 +136,7 @@ Example playbook to make sure an idrange is absent:
 
   tasks:
   - name: Ensure ID range 'ad_id_range' is absent.
-    ipaidrange:
+    freeipa.ansible_freeipa.ipaidrange:
       ipaadmin_password: SomeADMINpassword
       name: ad_id_range
       state: absent

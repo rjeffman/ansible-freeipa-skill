@@ -49,7 +49,7 @@ Example playbook to make sure netgroup "my_netgroup1" is present:
 
   tasks:
   - name: Ensure netgroup my_netgroup1 is present
-    ipanetgroup:
+    freeipa.ansible_freeipa.ipanetgroup:
       ipaadmin_password: SomeADMINpassword
       name: my_netgroup1
       description: My netgroup 1
@@ -66,7 +66,7 @@ Example playbook to make sure netgroup "my_netgroup1" is absent:
 
   tasks:
   - name: Ensure netgroup my_netgroup1 is absent
-    ipanetgroup:
+    freeipa.ansible_freeipa.ipanetgroup:
       ipaadmin_password: SomeADMINpassword
       name: my_netgroup1
       state: absent
@@ -83,7 +83,7 @@ Example playbook to make sure netgroup is present with user "user1"
 
   tasks:
   - name: Ensure netgroup is present with user "user1"
-    ipanetgroup:
+    freeipa.ansible_freeipa.ipanetgroup:
       ipaadmin_password: SomeADMINpassword
       name: TestNetgroup1
       user: user1
@@ -101,7 +101,7 @@ Example playbook to make sure netgroup user, "user1", is absent
 
   tasks:
   - name: Ensure netgroup user, "user1", is absent
-    ipanetgroup:
+    freeipa.ansible_freeipa.ipanetgroup:
       ipaadmin_password: SomeADMINpassword
       name: TestNetgroup1
       user: "user1"
@@ -120,7 +120,7 @@ Example playbook to make sure netgroup is present with members
 
   tasks:
   - name: Ensure netgroup members are present
-    ipanetgroup:
+    freeipa.ansible_freeipa.ipanetgroup:
       ipaadmin_password: SomeADMINpassword
       name: TestNetgroup1
       user: user1,user2
@@ -142,7 +142,7 @@ Example playbook to make sure 2 netgroups TestNetgroup1, admins are absent
 
   tasks:
   - name: Ensure netgroups are absent
-    ipanetgroup:
+    freeipa.ansible_freeipa.ipanetgroup:
       ipaadmin_password: SomeADMINpassword
       name:
       - TestNetgroup1

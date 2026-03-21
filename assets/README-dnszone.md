@@ -50,7 +50,7 @@ Example playbook to create a simple DNS zone:
 
   tasks:
   - name: Ensure zone is present.
-    ipadnszone:
+    freeipa.ansible_freeipa.ipadnszone:
       ipaadmin_password: SomeADMINpassword
       name: testzone.local
       state: present
@@ -68,7 +68,7 @@ Example playbook to create a DNS zone with all currently supported variables:
 
   tasks:
   - name: Ensure zone is present.
-    ipadnszone:
+    freeipa.ansible_freeipa.ipadnszone:
       ipaadmin_password: SomeADMINpassword
       name: testzone.local
       allow_sync_ptr: true
@@ -110,7 +110,7 @@ Example playbook to disable a zone:
 
   tasks:
   - name: Disable zone.
-    ipadnszone:
+    freeipa.ansible_freeipa.ipadnszone:
       ipaadmin_password: SomeADMINpassword
       name: testzone.local
       state: disabled
@@ -127,7 +127,7 @@ Example playbook to enable a zone:
 
   tasks:
   - name: Enable zone.
-    ipadnszone:
+    freeipa.ansible_freeipa.ipadnszone:
       ipaadmin_password: SomeADMINpassword
       name: testzone.local
       state: enabled
@@ -143,7 +143,7 @@ Example playbook to allow per-zone privilege delegation:
 
   tasks:
   - name: Enable privilege delegation.
-    ipadnszone:
+    freeipa.ansible_freeipa.ipadnszone:
       ipaadmin_password: SomeADMINpassword
       name: testzone.local
       permission: true
@@ -160,7 +160,7 @@ Example playbook to remove a zone:
 
   tasks:
   - name: Remove zone.
-    ipadnszone:
+    freeipa.ansible_freeipa.ipadnszone:
       ipaadmin_password: SomeADMINpassword
       name: testzone.local
       state: absent
@@ -178,7 +178,7 @@ Example playbook to create a zone for reverse DNS lookup, from an IP address:
 
   tasks:
   - name: Ensure zone for reverse DNS lookup is present.
-    ipadnszone:
+    freeipa.ansible_freeipa.ipadnszone:
       ipaadmin_password: SomeADMINpassword
       name_from_ip: 192.168.1.2
       state: present
@@ -197,7 +197,7 @@ Example playbook to create a zone for reverse DNS lookup, from an IP address, gi
 
   tasks:
   - name: Ensure zone for reverse DNS lookup is present.
-    ipadnszone:
+    freeipa.ansible_freeipa.ipadnszone:
       ipaadmin_password: SomeADMINpassword
       name_from_ip: 192.168.1.2/24
       state: present

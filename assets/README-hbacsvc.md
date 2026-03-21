@@ -49,7 +49,7 @@ Example playbook to make sure HBAC Service for http is present
 
   tasks:
   # Ensure HBAC Service for http is present
-  - ipahbacsvc:
+  - freeipa.ansible_freeipa.ipahbacsvc:
       ipaadmin_password: SomeADMINpassword
       name: http
       description: Web service
@@ -65,7 +65,7 @@ Example playbook to make sure HBAC Service for tftp is present
 
   tasks:
   # Ensure HBAC Service for tftp is present
-  - ipahbacsvc:
+  - freeipa.ansible_freeipa.ipahbacsvc:
       ipaadmin_password: SomeADMINpassword
       name: tftp
       description: TFTPWeb service
@@ -81,7 +81,7 @@ Example playbook to make sure HBAC Services for http and tftp are absent
 
   tasks:
   # Ensure HBAC Service for http and tftp are absent
-  - ipahbacsvc:
+  - freeipa.ansible_freeipa.ipahbacsvc:
       ipaadmin_password: SomeADMINpassword
       name: http,tftp
       state: absent

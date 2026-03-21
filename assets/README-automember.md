@@ -47,7 +47,7 @@ Example playbook to make sure group automember rule is present with no condition
   become: yes
   gather_facts: no
   tasks:
-    - ipaautomember:
+    - freeipa.ansible_freeipa.ipaautomember:
         ipaadmin_password: SomeADMINpassword
         name: admins
         description: "my automember rule"
@@ -63,7 +63,7 @@ Example playbook to make sure group automember rule is present with conditions:
   become: yes
   gather_facts: no
   tasks:
-  - ipaautomember:
+  - freeipa.ansible_freeipa.ipaautomember:
       ipaadmin_password: SomeADMINpassword
       name: admins
       description: "my automember rule"
@@ -84,7 +84,7 @@ Example playbook to delete a group automember rule:
   become: yes
   gather_facts: no
   tasks:
-    - ipaautomember:
+    - freeipa.ansible_freeipa.ipaautomember:
         ipaadmin_password: SomeADMINpassword
         name: admins
         description: "my automember rule"
@@ -100,7 +100,7 @@ Example playbook to add an inclusive condition to an existing rule
   become: yes
   gather_facts: no
   tasks:
-    - ipaautomember:
+    - freeipa.ansible_freeipa.ipaautomember:
         ipaadmin_password: SomeADMINpassword
         name: "My domain hosts"
         description: "my automember condition"
@@ -119,7 +119,7 @@ Example playbook to ensure group membership for all users has been rebuilt
   become: yes
   gather_facts: no
   tasks:
-    - ipaautomember:
+    - freeipa.ansible_freeipa.ipaautomember:
         ipaadmin_password: SomeADMINpassword
         automember_type: group
         state: rebuilt
@@ -134,7 +134,7 @@ Example playbook to ensure group membership for given users has been rebuilt
   become: yes
   gather_facts: no
   tasks:
-    - ipaautomember:
+    - freeipa.ansible_freeipa.ipaautomember:
         ipaadmin_password: SomeADMINpassword
         users:
         - user1
@@ -150,7 +150,7 @@ Example playbook to ensure hostgroup membership for all hosts has been rebuilt
   become: yes
   gather_facts: no
   tasks:
-    - ipaautomember:
+    - freeipa.ansible_freeipa.ipaautomember:
         ipaadmin_password: SomeADMINpassword
         automember_type: hostgroup
         state: rebuilt
@@ -164,7 +164,7 @@ Example playbook to ensure hostgroup membership for given hosts has been rebuilt
   become: yes
   gather_facts: no
   tasks:
-    - ipaautomember:
+    - freeipa.ansible_freeipa.ipaautomember:
         ipaadmin_password: SomeADMINpassword
         hosts:
         - host1.mydomain.com
@@ -180,7 +180,7 @@ Example playbook to ensure default group fallback_group for all unmatched group 
   become: yes
   gather_facts: no
   tasks:
-    - ipaautomember:
+    - freeipa.ansible_freeipa.ipaautomember:
         ipaadmin_password: SomeADMINpassword
         automember_type: group
         default_group: fallback_group
@@ -194,7 +194,7 @@ Example playbook to ensure default group for all unmatched group entries is not 
   become: yes
   gather_facts: no
   tasks:
-    - ipaautomember:
+    - freeipa.ansible_freeipa.ipaautomember:
         ipaadmin_password: SomeADMINpassword
         default_group: ""
         automember_type: group
@@ -209,7 +209,7 @@ Example playbook to ensure default hostgroup fallback_hostgroup for all unmatche
   become: yes
   gather_facts: no
   tasks:
-    - ipaautomember:
+    - freeipa.ansible_freeipa.ipaautomember:
         ipaadmin_password: SomeADMINpassword
         automember_type: hostgroup
         default_group: fallback_hostgroup
@@ -223,7 +223,7 @@ Example playbook to ensure default hostgroup for all unmatched group entries is 
   become: yes
   gather_facts: no
   tasks:
-    - ipaautomember:
+    - freeipa.ansible_freeipa.ipaautomember:
         ipaadmin_password: SomeADMINpassword
         automember_type: hostgroup
         default_group: ""
@@ -238,7 +238,7 @@ Example playbook to ensure all orphan automember group rules are removed:
   become: yes
   gather_facts: no
   tasks:
-    - ipaautomember:
+    - freeipa.ansible_freeipa.ipaautomember:
         ipaadmin_password: SomeADMINpassword
         automember_type: group
         state: orphans_removed
@@ -252,7 +252,7 @@ Example playbook to ensure all orphan automember hostgroup rules are removed:
   become: yes
   gather_facts: no
   tasks:
-    - ipaautomember:
+    - freeipa.ansible_freeipa.ipaautomember:
         ipaadmin_password: SomeADMINpassword
         automember_type: hostgroup
         state: orphans_removed

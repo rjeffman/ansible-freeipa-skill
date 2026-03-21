@@ -49,7 +49,7 @@ By default, user verification for passkey authentication is turned on (`true`). 
 
   tasks:
   - name: Ensure require_user_verification is false
-    ipapasskeyconfig:
+    freeipa.ansible_freeipa.ipapasskeyconfig:
       ipaadmin_password: SomeADMINpassword
       require_user_verification: false
 ```
@@ -65,7 +65,7 @@ Example playbook to get current passkeyconfig:
 
   tasks:
   - name: Retrieve current passkey configuration
-    ipapasskeyconfig:
+    freeipa.ansible_freeipa.ipapasskeyconfig:
       ipaadmin_password: SomeADMINpassword
 ```
 

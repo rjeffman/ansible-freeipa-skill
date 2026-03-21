@@ -48,7 +48,7 @@ Example playbook to make sure privilege "Broad Privilege" is present:
   become: yes
 
   tasks:
-  - ipaprivilege:
+  - freeipa.ansible_freeipa.ipaprivilege:
       ipaadmin_password: SomeADMINpassword
       name: Broad Privilege
       description: Broad Privilege
@@ -63,7 +63,7 @@ Example playbook to make sure privilege "Broad Privilege" member permission has 
   become: yes
 
   tasks:
-  - ipaprivilege:
+  - freeipa.ansible_freeipa.ipaprivilege:
       ipaadmin_password: SomeADMINpassword
       name: Broad Privilege
       permission:
@@ -84,7 +84,7 @@ Example playbook to make sure privilege "Broad Privilege" member permission 'Wri
   become: yes
 
   tasks:
-  - ipaprivilege:
+  - freeipa.ansible_freeipa.ipaprivilege:
       ipaadmin_password: SomeADMINpassword
       name: Broad Privilege
       permission:
@@ -102,7 +102,7 @@ Example playbook to rename privilege "Broad Privilege" to "DNS Special Privilege
   become: yes
 
   tasks:
-  - ipaprivilege:
+  - freeipa.ansible_freeipa.ipaprivilege:
       ipaadmin_password: SomeADMINpassword
       name: Broad Privilege
       rename: DNS Special Privilege

@@ -56,7 +56,7 @@ Example playbook to make sure test group test_group is present in idview test_id
 
   tasks:
   - name: Ensure test group test_group is present in idview test_idview.
-    ipaidoverridegroup:
+    freeipa.ansible_freeipa.ipaidoverridegroup:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_group
@@ -73,7 +73,7 @@ Example playbook to make sure test group test_group is present in idview test_id
 
   tasks:
   - name: Ensure test group test_group is present in idview test_idview with description
-    ipaidoverridegroup:
+    freeipa.ansible_freeipa.ipaidoverridegroup:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_group
@@ -91,7 +91,7 @@ Example playbook to make sure test group test_group is present in idview test_id
 
   tasks:
   - name: Ensure test group test_group is present in idview test_idview without description
-    ipaidoverridegroup:
+    freeipa.ansible_freeipa.ipaidoverridegroup:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_group
@@ -109,7 +109,7 @@ Example playbook to make sure test group test_group is present in idview test_id
 
   tasks:
   - name: Ensure test group test_group is present in idview test_idview with internal name test_123_group
-    ipaidoverridegroup:
+    freeipa.ansible_freeipa.ipaidoverridegroup:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_group
@@ -127,7 +127,7 @@ Example playbook to make sure test group test_group is present in idview test_id
   become: false
 
   tasks:
-  - ipaidoverridegroup:
+  - freeipa.ansible_freeipa.ipaidoverridegroup:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_group
@@ -145,7 +145,7 @@ Example playbook to make sure test group test_group is present in idview test_id
 
   tasks:
   - name: Ensure test group test_group is present in idview test_idview with gid 20001
-    ipaidoverridegroup:
+    freeipa.ansible_freeipa.ipaidoverridegroup:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_group
@@ -163,7 +163,7 @@ Example playbook to make sure test group test_group is present in idview test_id
 
   tasks:
   - name: Ensure test group test_group is present in idview test_idview without gid
-    ipaidoverridegroup:
+    freeipa.ansible_freeipa.ipaidoverridegroup:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_group
@@ -181,7 +181,7 @@ Example playbook to make sure test group test_group is present in idview test_id
 
   tasks:
   - name: Ensure test group test_group is present in idview test_idview with fallback_to_ldap enabled
-    ipaidoverridegroup:
+    freeipa.ansible_freeipa.ipaidoverridegroup:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_group
@@ -199,7 +199,7 @@ Example playbook to make sure test group test_group is absent in idview test_idv
 
   tasks:
   - name: Ensure test group test_group is absent in idview test_idview
-    ipaidoverridegroup:
+    freeipa.ansible_freeipa.ipaidoverridegroup:
       ipaadmin_password: SomeADMINpassword
       idview: test_idview
       anchor: test_group

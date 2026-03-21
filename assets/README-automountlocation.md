@@ -48,7 +48,7 @@ Example playbook to ensure presence of an automount location:
 
   tasks:
   - name: ensure a automount location named DMZ exists
-    ipaautomountlocation:
+    freeipa.ansible_freeipa.ipaautomountlocation:
       ipaadmin_password: SomeADMINpassword
       name: DMZ
       state: present
@@ -65,7 +65,7 @@ Example playbook to ensure presence of multiple automount locations:
 
   tasks:
   - name: ensure a automount location named DMZ exists
-    ipaautomountlocation:
+    freeipa.ansible_freeipa.ipaautomountlocation:
       ipaadmin_password: SomeADMINpassword
       name:
         - DMZ
@@ -86,7 +86,7 @@ Example playbook to ensure absence of an automount location:
 
   tasks:
   - name: ensure automount locations LOCATION1 and LOCATION2 do not exist
-    ipaautomountlocation:
+    freeipa.ansible_freeipa.ipaautomountlocation:
       ipaadmin_password: SomeADMINpassword
       name:
         - LOCATION1

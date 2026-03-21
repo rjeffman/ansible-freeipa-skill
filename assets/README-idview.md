@@ -55,7 +55,7 @@ Example playbook to make sure idview "test_idview" is present:
   become: false
 
   tasks:
-  - ipaidview:
+  - freeipa.ansible_freeipa.ipaidview:
       ipaadmin_password: SomeADMINpassword
       name: test_idview
 ```
@@ -70,7 +70,7 @@ Example playbook to make sure idview "test_idview" member host "testhost.example
   become: false
 
   tasks:
-  - ipaidview:
+  - freeipa.ansible_freeipa.ipaidview:
       ipaadmin_password: SomeADMINpassword
       name: test_idview
       host: testhost.example.com
@@ -87,7 +87,7 @@ Example playbook to make sure idview "test_idview" member host "testhost.example
   become: false
 
   tasks:
-  - ipaidview:
+  - freeipa.ansible_freeipa.ipaidview:
       ipaadmin_password: SomeADMINpassword
       name: test_idview
       host: testhost.example.com
@@ -105,7 +105,7 @@ Example playbook to make sure idview "test_idview" is present with domain_resolu
   become: false
 
   tasks:
-  - ipaidview:
+  - freeipa.ansible_freeipa.ipaidview:
       ipaadmin_password: SomeADMINpassword
       name: test_idview
       domain_resolution_order: "ad.example.com:ipa.example.com"
@@ -121,7 +121,7 @@ Example playbook to make sure idview "test_idview" is absent:
   become: false
 
   tasks:
-  - ipaidview:
+  - freeipa.ansible_freeipa.ipaidview:
       ipaadmin_password: SomeADMINpassword
       name: test_idview
       state: absent

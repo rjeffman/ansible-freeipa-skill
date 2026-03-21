@@ -42,7 +42,7 @@ Example playbook to ensure an AAAA record is present:
 
 ```yaml
 ---
-- ipadnsrecord:
+- freeipa.ansible_freeipa.ipadnsrecord:
     ipaadmin_password: SomeADMINpassword
     name: host01
     zone_name: example.com
@@ -54,7 +54,7 @@ Example playbook to ensure an AAAA record is present, with a TTL of 300:
 
 ```yaml
 ---
-- ipadnsrecord:
+- freeipa.ansible_freeipa.ipadnsrecord:
     ipaadmin_password: SomeADMINpassword
     name: host01
     zone_name: example.com
@@ -66,7 +66,7 @@ Example playbook to ensure an AAAA record is present, with a TTL of 300:
 Example playbook to ensure an AAAA record is present, with a reverse PTR record:
 ```yaml
 ---
-- ipadnsrecord:
+- freeipa.ansible_freeipa.ipadnsrecord:
     ipaadmin_password: SomeADMINpassword
     name: host02
     zone_name: example.com
@@ -78,7 +78,7 @@ Example playbook to ensure an AAAA record is present, with a reverse PTR record:
 Example playbook to ensure a LOC record is present, given its individual attributes:
 ```yaml
 ---
-- ipadnsrecord:
+- freeipa.ansible_freeipa.ipadnsrecord:
     ipaadmin_password: SomeADMINpassword
     zone_name: example.com
     name: host03
@@ -120,7 +120,7 @@ Example playbook to ensure multiple CNAME records are present:
 ```yaml
 ---
 - name: Ensure that 'host03' and 'host04' have CNAME records.
-  ipadnsrecord:
+  freeipa.ansible_freeipa.ipadnsrecord:
     ipaadmin_password: SomeADMINpassword
     zone_name: example.com
     records:
@@ -134,7 +134,7 @@ Example playbook to ensure NS record is absent:
 
 ```yaml
 ---
-- ipadnsrecord:
+- freeipa.ansible_freeipa.ipadnsrecord:
     ipaadmin_password: SomeADMINpassword
     zone_name: example.com
     name: host04
@@ -146,7 +146,7 @@ Example playbook to ensure LOC record is present, with fields:
 
 ```yaml
 ---
-- ipadnsrecord:
+- freeipa.ansible_freeipa.ipadnsrecord:
     ipaadmin_password: SomeADMINpassword
     zone_name: example.com
     name: host04
@@ -168,7 +168,7 @@ Change value of an existing LOC record:
 
 ```yaml
 ---
-- ipadnsrecord:
+- freeipa.ansible_freeipa.ipadnsrecord:
   ipaadmin_password: SomeADMINpassword
   zone_name: example.com
   name: host04
@@ -179,7 +179,7 @@ Change value of an existing LOC record:
 Example playbook to ensure multiple A records are present:
 
 ```yaml
-- ipadnsrecord:
+- freeipa.ansible_freeipa.ipadnsrecord:
     ipaadmin_password: SomeADMINpassword
     zone_name: example.com
     name: host04
@@ -192,7 +192,7 @@ Example playbook to ensure multiple A records are present:
 
 Example playbook to ensure A and AAAA records are present, with reverse records (PTR):
 ```yaml
-- ipadnsrecord:
+- freeipa.ansible_freeipa.ipadnsrecord:
     ipaadmin_password: SomeADMINpassword
     zone_name: example.com
     name: host01
@@ -207,7 +207,7 @@ Example playbook to ensure A and AAAA records are present, with reverse records 
 
 Example playbook to ensure multiple A and AAAA records are present, but only A records have reverse records:
 ```yaml
-- ipadnsrecord:
+- freeipa.ansible_freeipa.ipadnsrecord:
     ipaadmin_password: SomeADMINpassword
     zone_name: example.com
     name: host01
@@ -220,7 +220,7 @@ Example playbook to ensure multiple DNS records are absent:
 
 ```yaml
 ---
-- ipadnsrecord:
+- freeipa.ansible_freeipa.ipadnsrecord:
     ipaadmin_password: SomeADMINpassword
     zone_name: example.com
     records:

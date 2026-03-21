@@ -49,7 +49,7 @@ Example playbook to make sure permission "MyPermission" is present:
 
   tasks:
   - name: Ensure permission MyPermission is present
-    ipapermission:
+    freeipa.ansible_freeipa.ipapermission:
       ipaadmin_password: SomeADMINpassword
       name: MyPermission
       object_type: host
@@ -67,7 +67,7 @@ Example playbook to ensure permission "MyPermission" is present with attr carlic
 
   tasks:
   - name: Ensure permission "MyPermission" is present with attr carlicense
-    ipapermission:
+    freeipa.ansible_freeipa.ipapermission:
       ipaadmin_password: SomeADMINpassword
       name: MyPermission
       object_type: host
@@ -87,7 +87,7 @@ Example playbook to ensure attr gecos is present in permission "MyPermission":
 
   tasks:
   - name: Ensure attr gecos is present in permission "MyPermission"
-    ipapermission:
+    freeipa.ansible_freeipa.ipapermission:
       ipaadmin_password: SomeADMINpassword
       name: MyPermission
       attrs:
@@ -106,7 +106,7 @@ Example playbook to ensure attr gecos is absent in permission "MyPermission":
 
   tasks:
   - name: Ensure attr gecos is present in permission "MyPermission"
-    ipapermission:
+    freeipa.ansible_freeipa.ipapermission:
       ipaadmin_password: SomeADMINpassword
       name: MyPermission
       attrs:
@@ -126,7 +126,7 @@ Example playbook to make sure permission "MyPermission" is absent:
 
   tasks:
   - name: Ensure permission "MyPermission" is absent
-    ipapermission:
+    freeipa.ansible_freeipa.ipapermission:
       ipaadmin_password: SomeADMINpassword
       name: MyPermission
       state: absent
@@ -143,7 +143,7 @@ Example playbook to make sure permission "MyPermission" is renamed to "MyNewPerm
 
   tasks:
   - name: Ensure permission "MyPermission" is renamed to "MyNewPermission
-    ipapermission:
+    freeipa.ansible_freeipa.ipapermission:
       ipaadmin_password: SomeADMINpassword
       name: MyPermission
       rename: MyNewPermission

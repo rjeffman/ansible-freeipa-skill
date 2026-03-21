@@ -50,7 +50,7 @@ Example playbook to make sure vault is present (by default, vault type is `symme
   become: true
 
   tasks:
-  - ipavault:
+  - freeipa.ansible_freeipa.ipavault:
       ipaadmin_password: SomeADMINpassword
       name: symvault
       password: SomeVAULTpassword
@@ -66,7 +66,7 @@ Example playbook to make sure that a vault and its members are present:
   become: true
 
   tasks:
-  - ipavault:
+  - freeipa.ansible_freeipa.ipavault:
       ipaadmin_password: SomeADMINpassword
       name: symvault
       username: admin
@@ -84,7 +84,7 @@ Example playbook to make sure that a vault member is present in vault:
   become: true
 
   tasks:
-  - ipavault:
+  - freeipa.ansible_freeipa.ipavault:
       ipaadmin_password: SomeADMINpassword
       name: symvault
       username: admin
@@ -101,7 +101,7 @@ Example playbook to make sure that a vault owner is absent in vault:
   become: true
 
   tasks:
-  - ipavault:
+  - freeipa.ansible_freeipa.ipavault:
       ipaadmin_password: SomeADMINpassword
       name: symvault
       username: admin
@@ -119,7 +119,7 @@ Example playbook to make sure vault data is present in a symmetric vault:
   become: true
 
   tasks:
-  - ipavault:
+  - freeipa.ansible_freeipa.ipavault:
       ipaadmin_password: SomeADMINpassword
       name: symvault
       username: admin
@@ -140,7 +140,7 @@ When retrieving data from a vault, it is recommended that `no_log: yes` is used,
 
   tasks:
   - name: Retrieve data from vault and register it in 'ipavault'
-    ipavault:
+    freeipa.ansible_freeipa.ipavault:
       ipaadmin_password: SomeADMINpassword
       name: symvault
       username: admin
@@ -163,7 +163,7 @@ Example playbook to make sure vault data is absent in a symmetric vault:
   become: true
 
   tasks:
-  - ipavault:
+  - freeipa.ansible_freeipa.ipavault:
       ipaadmin_password: SomeADMINpassword
       name: symvault
       username: admin
@@ -181,7 +181,7 @@ Example playbook to change the password of a symmetric:
   become: true
 
   tasks:
-  - ipavault:
+  - freeipa.ansible_freeipa.ipavault:
       ipaadmin_password: SomeADMINpassword
       name: symvault
       old_password: SomeVAULTpassword
@@ -197,7 +197,7 @@ Example playbook to make sure vault is absent:
   become: true
 
   tasks:
-  - ipavault:
+  - freeipa.ansible_freeipa.ipavault:
       ipaadmin_password: SomeADMINpassword
       name: symvault
       username: admin

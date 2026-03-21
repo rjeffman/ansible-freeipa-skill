@@ -48,7 +48,7 @@ Example playbook to ensure presence of a forwardzone to ipa DNS:
 
   tasks:
   - name: ensure presence of forwardzone with a single forwarder DNS server
-    ipadnsforwardzone:
+    freeipa.ansible_freeipa.ipadnsforwardzone:
       ipaadmin_password: SomeADMINpassword
       state: present
       name: example.com
@@ -58,13 +58,13 @@ Example playbook to ensure presence of a forwardzone to ipa DNS:
       skip_overlap_check: true
 
   - name: ensure the forward zone is disabled
-    ipadnsforwardzone:
+    freeipa.ansible_freeipa.ipadnsforwardzone:
       ipaadmin_password: SomeADMINpassword
       name: example.com
       state: disabled
 
   - name: ensure presence of forwardzone with multiple forwarder DNS server
-    ipadnsforwardzone:
+    freeipa.ansible_freeipa.ipadnsforwardzone:
       ipaadmin_password: SomeADMINpassword
       state: present
       name: example.com
@@ -73,7 +73,7 @@ Example playbook to ensure presence of a forwardzone to ipa DNS:
         - ip_address: 4.4.4.4
 
   - name: ensure presence of another forwarder to any existing ones for example.com
-    ipadnsforwardzone:
+    freeipa.ansible_freeipa.ipadnsforwardzone:
       ipaadmin_password: SomeADMINpassword
       state: present
       name: example.com
@@ -82,7 +82,7 @@ Example playbook to ensure presence of a forwardzone to ipa DNS:
       action: member
 
   - name: ensure presence of forwardzone with single forwarder DNS server on non-stardard port
-    ipadnsforwardzone:
+    freeipa.ansible_freeipa.ipadnsforwardzone:
       ipaadmin_password: SomeADMINpassword
       state: present
       name: example.com
@@ -91,7 +91,7 @@ Example playbook to ensure presence of a forwardzone to ipa DNS:
           port: 8053
 
   - name: ensure the forward zone is absent
-    ipadnsforwardzone:
+    freeipa.ansible_freeipa.ipadnsforwardzone:
       ipaadmin_password: SomeADMINpassword
       name: example.com
       state: absent

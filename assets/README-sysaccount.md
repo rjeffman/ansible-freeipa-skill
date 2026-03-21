@@ -49,7 +49,7 @@ Example playbook to make sure sysaccount "my-app" is present with random passwor
 
   tasks:
   - name: Ensure sysaccount "my-app" is present with random password
-    ipasysaccount:
+    freeipa.ansible_freeipa.ipasysaccount:
       ipaadmin_password: SomeADMINpassword
       name: my-app
       random: true
@@ -72,7 +72,7 @@ Example playbook to make sure sysaccount "my-app" is present with given password
 
   tasks:
   - name: Ensure sysaccount "my-app" is present with given password
-    ipasysaccount:
+    freeipa.ansible_freeipa.ipasysaccount:
       ipaadmin_password: SomeADMINpassword
       name: my-app
       password: SomeAPPpassword
@@ -89,7 +89,7 @@ Example playbook to make sure sysaccount "my-app" is absent:
 
   tasks:
   - name: Ensure sysaccount "my-app" is absent
-    ipasysaccount:
+    freeipa.ansible_freeipa.ipasysaccount:
       ipaadmin_password: SomeADMINpassword
       name: my-app
       state: absent
@@ -105,7 +105,7 @@ Example playbook to ensure existing sysaccount my-app is privileged
 
   tasks:
   - name: Ensure existing sysaccount my-app is privileged
-    ipasysaccount:
+    freeipa.ansible_freeipa.ipasysaccount:
       ipaadmin_password: SomeADMINpassword
       name: my-app
       privileged: true
@@ -121,7 +121,7 @@ Example playbook to ensure existing sysaccount my-app is not privileged
 
   tasks:
   - name: Ensure existing sysaccount my-app is not privileged
-    ipasysaccount:
+    freeipa.ansible_freeipa.ipasysaccount:
       ipaadmin_password: SomeADMINpassword
       name: my-app
       privileged: false
@@ -137,7 +137,7 @@ Example playbook to ensure existing sysaccount my-app is disabled
 
   tasks:
   - name: Ensure existing sysaccount my-app is disabled
-    ipasysaccount:
+    freeipa.ansible_freeipa.ipasysaccount:
       ipaadmin_password: SomeADMINpassword
       name: my-app
       state: disabled
@@ -153,7 +153,7 @@ Example playbook to ensure existing sysaccount my-app is enabled
 
   tasks:
   - name: Ensure existing sysaccount my-app is enabled
-    ipasysaccount:
+    freeipa.ansible_freeipa.ipasysaccount:
       ipaadmin_password: SomeADMINpassword
       name: my-app
       state: enabled

@@ -49,7 +49,7 @@ Example playbook to make sure keycloak idp my-keycloak-idp is present:
 
   tasks:
   - name: Ensure keycloak idp my-keycloak-idp is present
-    ipaidp:
+    freeipa.ansible_freeipa.ipaidp:
       ipaadmin_password: SomeADMINpassword
       name: my-keycloak-idp
       provider: keycloak
@@ -69,7 +69,7 @@ Example playbook to make sure keycloak idp my-keycloak-idp is absent:
 
   tasks:
   - name: Ensure keycloak idp my-keycloak-idp is absent
-    ipaidp:
+    freeipa.ansible_freeipa.ipaidp:
       ipaadmin_password: SomeADMINpassword
       name: my-keycloak-idp
       delete_continue: true
@@ -87,7 +87,7 @@ Example playbook to make sure github idp my-github-idp is present:
 
   tasks:
   - name: Ensure github idp my-github-idp is present
-    ipaidp:
+    freeipa.ansible_freeipa.ipaidp:
       ipaadmin_password: SomeADMINpassword
       name: my-github-idp
       provider: github
@@ -105,7 +105,7 @@ Example playbook to make sure google idp my-google-idp is present using provider
 
   tasks:
   - name: Ensure google idp my-google-idp is present using provider defaults without specifying provider
-    ipaidp:
+    freeipa.ansible_freeipa.ipaidp:
       ipaadmin_password: SomeADMINpassword
       name: my-google-idp
       auth_uri: https://accounts.google.com/o/oauth2/auth
@@ -129,7 +129,7 @@ Example playbook to make sure google idp my-google-idp is present using provider
 
   tasks:
   - name: Ensure google idp my-google-idp is present using provider
-    ipaidp:
+    freeipa.ansible_freeipa.ipaidp:
       ipaadmin_password: SomeADMINpassword
       name: my-google-idp
       provider: google
@@ -147,7 +147,7 @@ Example playbook to make sure idps my-keycloak-idp, my-github-idp and my-google-
 
   tasks:
   - name: Ensure idps my-keycloak-idp, my-github-idp and my-google-idp are absent
-    ipaidp:
+    freeipa.ansible_freeipa.ipaidp:
       ipaadmin_password: SomeADMINpassword
       name:
       - my-keycloak-idp

@@ -51,7 +51,7 @@ Example playbook to make sure servicedelegationrule delegation-rule is present:
 
   tasks:
   - name: Ensure servicedelegationrule delegation-rule is present
-    ipaservicedelegationrule:
+    freeipa.ansible_freeipa.ipaservicedelegationrule:
       ipaadmin_password: SomeADMINpassword
       name: delegation-rule
 ```
@@ -67,7 +67,7 @@ Example playbook to make sure servicedelegationrule delegation-rule member princ
 
   tasks:
   - name: Ensure servicedelegationrule delegation-rule member principal test/example.com is present
-    ipaservicedelegationrule:
+    freeipa.ansible_freeipa.ipaservicedelegationrule:
       ipaadmin_password: SomeADMINpassword
       name: delegation-rule
       principal: test/example.com
@@ -85,7 +85,7 @@ Example playbook to make sure servicedelegationrule delegation-rule member princ
 
   tasks:
   - name: Ensure servicedelegationrule delegation-rule member principal test/example.com is absent
-    ipaservicedelegationrule:
+    freeipa.ansible_freeipa.ipaservicedelegationrule:
       ipaadmin_password: SomeADMINpassword
       name: delegation-rule
       principal: test/example.com
@@ -105,7 +105,7 @@ Example playbook to make sure servicedelegationrule delegation-rule member targe
 
   tasks:
   - name: Ensure servicedelegationrule delegation-rule member target delegation-target is present
-    ipaservicedelegationrule:
+    freeipa.ansible_freeipa.ipaservicedelegationrule:
       ipaadmin_password: SomeADMINpassword
       name: delegation-rule
       target: delegation-target
@@ -123,7 +123,7 @@ Example playbook to make sure servicedelegationrule delegation-rule member targe
 
   tasks:
   - name: Ensure servicedelegationrule delegation-rule member target delegation-target is absent
-    ipaservicedelegationrule:
+    freeipa.ansible_freeipa.ipaservicedelegationrule:
       ipaadmin_password: SomeADMINpassword
       name: delegation-rule
       target: delegation-target
@@ -143,7 +143,7 @@ Example playbook to make sure servicedelegationrule delegation-rule is absent:
 
   tasks:
   - name: Ensure servicedelegationrule delegation-rule is absent
-    ipaservicedelegationrule:
+    freeipa.ansible_freeipa.ipaservicedelegationrule:
       ipaadmin_password: SomeADMINpassword
       name: delegation-rule
       state: absent

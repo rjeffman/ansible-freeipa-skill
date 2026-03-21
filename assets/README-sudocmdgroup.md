@@ -51,7 +51,7 @@ Example playbook to make sure sudocmdgroup is present:
 
   tasks:
   # Ensure sudocmdgroup is present
-  - ipasudocmdgroup:
+  - freeipa.ansible_freeipa.ipasudocmdgroup:
       ipaadmin_password: SomeADMINpassword
       name: group01
       description: Group of important commands
@@ -67,7 +67,7 @@ Example playbook to make sure that a sudo command and sudocmdgroups are present 
 
   tasks:
   # Ensure sudo commands are present in existing sudocmdgroup
-  - ipasudocmdgroup:
+  - freeipa.ansible_freeipa.ipasudocmdgroup:
       ipaadmin_password: SomeADMINpassword
       name: group01
       sudocmd:
@@ -87,7 +87,7 @@ Example playbook to make sure that a sudo command and sudocmdgroups are absent i
 
   tasks:
   # Ensure sudocmds are absent in existing sudocmdgroup
-  - ipasudocmdgroup:
+  - freeipa.ansible_freeipa.ipasudocmdgroup:
       ipaadmin_password: SomeADMINpassword
       name: group01
       sudocmd:
@@ -107,7 +107,7 @@ Example playbook to make sure sudocmdgroup is absent:
 
   tasks:
   # Ensure sudocmdgroup is absent
-  - ipasudocmdgroup:
+  - freeipa.ansible_freeipa.ipasudocmdgroup:
       ipaadmin_password: SomeADMINpassword
       name: group01
       state: absent

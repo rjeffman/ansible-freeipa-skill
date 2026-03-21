@@ -44,7 +44,7 @@ Example playbook to ensure presence of pwpolicies for exisiting group ops:
 ```yaml
   tasks:
   - name: Ensure presence of pwpolicies for group ops
-    ipapwpolicy:
+    freeipa.ansible_freeipa.ipapwpolicy:
       ipaadmin_password: SomeADMINpassword
       name: ops
       minlife: 7
@@ -66,7 +66,7 @@ Example playbook to ensure absence of pwpolicies for group ops:
 
   tasks:
   # Ensure absence of pwpolicies for group ops
-  - ipapwpolicy:
+  - freeipa.ansible_freeipa.ipapwpolicy:
       ipaadmin_password: SomeADMINpassword
       name: ops
       state: absent
@@ -82,7 +82,7 @@ Example playbook to ensure maxlife is set to 49 in global policy:
 
   tasks:
   # Ensure maxlife is set to 49 in global policy
-  - ipapwpolicy:
+  - freeipa.ansible_freeipa.ipapwpolicy:
       ipaadmin_password: SomeADMINpassword
       maxlife: 49
 ```
@@ -97,7 +97,7 @@ Example playbook to ensure password grace period is set to 3 in global policy:
 
   tasks:
   # Ensure maxlife is set to 49 in global policy
-  - ipapwpolicy:
+  - freeipa.ansible_freeipa.ipapwpolicy:
       ipaadmin_password: SomeADMINpassword
       gracelimit: 3
 ```
@@ -112,7 +112,7 @@ Example playbook to ensure password grace period is set to unlimited in global p
 
   tasks:
   # Ensure maxlife is set to 49 in global policy
-  - ipapwpolicy:
+  - freeipa.ansible_freeipa.ipapwpolicy:
       ipaadmin_password: SomeADMINpassword
       gracelimit: -1
 ```

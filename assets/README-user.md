@@ -51,7 +51,7 @@ Example playbook to ensure a user is present:
 
   tasks:
   # Ensure user pinky is present
-  - ipauser:
+  - freeipa.ansible_freeipa.ipauser:
       ipaadmin_password: SomeADMINpassword
       name: pinky
       first: pinky
@@ -66,7 +66,7 @@ Example playbook to ensure a user is present:
       update_password: on_create
 
   # Ensure user brain is present
-  - ipauser:
+  - freeipa.ansible_freeipa.ipauser:
       ipaadmin_password: SomeADMINpassword
       name: brain
       first: brain
@@ -85,7 +85,7 @@ These two `ipauser` module calls can be combined into one with the `users` varia
 
   tasks:
   # Ensure users pinky and brain are present
-  - ipauser:
+  - freeipa.ansible_freeipa.ipauser:
       ipaadmin_password: SomeADMINpassword
       users:
       - name: pinky
@@ -138,7 +138,7 @@ And ensure the presence of the users with this example playbook:
       file: users_present.json
 
   - name: Users present
-    ipauser:
+    freeipa.ansible_freeipa.ipauser:
       ipaadmin_password: SomeADMINpassword
       users: "{{ users }}"
 ```
@@ -153,7 +153,7 @@ Ensure user pinky is present with a generated random password and print the rand
 
   tasks:
   # Ensure user pinky is present with a random password
-  - ipauser:
+  - freeipa.ansible_freeipa.ipauser:
       ipaadmin_password: SomeADMINpassword
       name: brain
       first: brain
@@ -176,7 +176,7 @@ Ensure users pinky and brain are present with a generated random password and pr
 
   tasks:
   # Ensure users pinky and brain are present with random password
-  - ipauser:
+  - freeipa.ansible_freeipa.ipauser:
       ipaadmin_password: SomeADMINpassword
       users:
       - name: pinky
@@ -212,7 +212,7 @@ Example playbook to delete a user, but preserve it:
 
   tasks:
   # Remove but preserve user pinky
-  - ipauser:
+  - freeipa.ansible_freeipa.ipauser:
       ipaadmin_password: SomeADMINpassword
       name: pinky
       preserve: yes
@@ -231,7 +231,7 @@ Example playbook to delete a user, but preserve it using the `users` variable:
 
   tasks:
   # Remove but preserve user pinky
-  - ipauser:
+  - freeipa.ansible_freeipa.ipauser:
       ipaadmin_password: SomeADMINpassword
       users:
       - name: pinky
@@ -252,7 +252,7 @@ Example playbook to undelete a preserved user.
 
   tasks:
   # Undelete preserved user pinky
-  - ipauser:
+  - freeipa.ansible_freeipa.ipauser:
       ipaadmin_password: SomeADMINpassword
       name: pinky
       state: undeleted
@@ -271,7 +271,7 @@ Example playbook to disable a user:
 
   tasks:
   # Disable user pinky
-  - ipauser:
+  - freeipa.ansible_freeipa.ipauser:
       ipaadmin_password: SomeADMINpassword
       name: pinky
       state: disabled
@@ -289,7 +289,7 @@ Example playbook to enable users:
 
   tasks:
   # Enable user pinky and brain
-  - ipauser:
+  - freeipa.ansible_freeipa.ipauser:
       ipaadmin_password: SomeADMINpassword
       name: pinky,brain
       state: enabled
@@ -307,7 +307,7 @@ Example playbook to rename users:
 
   tasks:
   # Rename user pinky to reddy
-  - ipauser:
+  - freeipa.ansible_freeipa.ipauser:
       ipaadmin_password: SomeADMINpassword
       name: pinky
       rename: reddy
@@ -324,7 +324,7 @@ Example playbook to unlock users:
 
   tasks:
   # Unlock user pinky and brain
-  - ipauser:
+  - freeipa.ansible_freeipa.ipauser:
       ipaadmin_password: SomeADMINpassword
       name: pinky,brain
       state: unlocked
@@ -341,7 +341,7 @@ Example playbook to ensure users are absent:
 
   tasks:
   # Ensure users pinky and brain are absent
-  - ipauser:
+  - freeipa.ansible_freeipa.ipauser:
       ipaadmin_password: SomeADMINpassword
       name: pinky,brain
       state: absent
@@ -360,7 +360,7 @@ Example playbook to ensure users are absent:
 
   tasks:
   # Ensure users pinky and brain are absent
-  - ipauser:
+  - freeipa.ansible_freeipa.ipauser:
       ipaadmin_password: SomeADMINpassword
       users:
       - name: pinky
@@ -384,7 +384,7 @@ Example playbook to set SMB attributes:
 
   tasks:
   - name: Ensure user 'smbuser' is present with smb attributes
-    ipauser:
+    freeipa.ansible_freeipa.ipauser:
       ipaadmin_password: SomeADMINpassword
       name: smbuser
       first: SMB

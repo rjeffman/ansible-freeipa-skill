@@ -68,7 +68,7 @@ Example playbook to setup the IPA client(s) using principal from inventory file 
   - playbook_sensitive_data.yml
 
   roles:
-  - role: ipareplica
+  - role: freeipa.ansible_freeipa.ipareplica
     state: present
 ```
 
@@ -81,7 +81,7 @@ Example playbook to unconfigure the IPA client(s) using principal and password f
   become: true
 
   roles:
-  - role: ipareplica
+  - role: freeipa.ansible_freeipa.ipareplica
     state: absent
 ```
 
@@ -111,7 +111,7 @@ Example playbook to setup the IPA client(s) using principal and password from in
   become: true
 
   roles:
-  - role: ipareplica
+  - role: freeipa.ansible_freeipa.ipareplica
     state: present
 ```
 
@@ -135,7 +135,7 @@ Example playbook to remove an IPA replica using admin passwords from the domain:
   become: true
 
   roles:
-  - role: ipareplica
+  - role: freeipa.ansible_freeipa.ipareplica
     state: absent
 ```
 

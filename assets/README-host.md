@@ -51,7 +51,7 @@ Example playbook to ensure host presence:
 
   tasks:
   # Ensure host is present
-  - ipahost:
+  - freeipa.ansible_freeipa.ipahost:
       ipaadmin_password: SomeADMINpassword
       name: host01.example.com
       description: Example host
@@ -78,7 +78,7 @@ Example playbook to ensure host presence with several IP addresses:
 
   tasks:
   # Ensure host is present
-  - ipahost:
+  - freeipa.ansible_freeipa.ipahost:
       ipaadmin_password: SomeADMINpassword
       name: host01.example.com
       description: Example host
@@ -108,7 +108,7 @@ Example playbook to ensure IP addresses are present for a host:
 
   tasks:
   # Ensure host is present
-  - ipahost:
+  - freeipa.ansible_freeipa.ipahost:
       ipaadmin_password: SomeADMINpassword
       name: host01.example.com
       ip_address:
@@ -129,7 +129,7 @@ Example playbook to ensure IP addresses are absent for a host:
 
   tasks:
   # Ensure host is present
-  - ipahost:
+  - freeipa.ansible_freeipa.ipahost:
       ipaadmin_password: SomeADMINpassword
       name: host01.example.com
       ip_address:
@@ -150,7 +150,7 @@ Example playbook to ensure host presence without DNS:
 
   tasks:
   # Ensure host is present without DNS
-  - ipahost:
+  - freeipa.ansible_freeipa.ipahost:
       ipaadmin_password: SomeADMINpassword
       name: host02.example.com
       description: Example host
@@ -168,7 +168,7 @@ Example playbook to ensure host presence with a random password:
 
   tasks:
   - name: Host host01.example.com present with random password
-    ipahost:
+    freeipa.ansible_freeipa.ipahost:
       ipaadmin_password: SomeADMINpassword
       name: host01.example.com
       random: yes
@@ -192,7 +192,7 @@ Example playbook to ensure presence of several hosts with a random password:
 
   tasks:
   - name: Hosts host01.example.com and host01.example.com present with random passwords
-    ipahost:
+    freeipa.ansible_freeipa.ipahost:
       ipaadmin_password: SomeADMINpassword
       hosts:
       - name: host01.example.com
@@ -226,7 +226,7 @@ Example playbook to ensure presence of host member principal:
 
   tasks:
   - name: Host host01.example.com present with principals host/testhost01.example.com and host/myhost01.example.com
-    ipahost:
+    freeipa.ansible_freeipa.ipahost:
       ipaadmin_password: SomeADMINpassword
       name: host01.example.com
       principal:
@@ -245,7 +245,7 @@ Example playbook to ensure presence of host member certificate:
 
   tasks:
   - name: Host host01.example.com present with certificate
-    ipahost:
+    freeipa.ansible_freeipa.ipahost:
       ipaadmin_password: SomeADMINpassword
       name: host01.example.com
       certificate:
@@ -263,7 +263,7 @@ Example playbook to ensure presence of member managedby_host for serveral hosts:
   become: true
 
   tasks:
-    ipahost:
+    freeipa.ansible_freeipa.ipahost:
       ipaadmin_password: SomeADMINpassword
       hosts:
       - name: host01.example.com
@@ -284,7 +284,7 @@ Example playbook to disable a host:
 
   tasks:
   # Ensure host is disabled
-  - ipahost:
+  - freeipa.ansible_freeipa.ipahost:
       ipaadmin_password: SomeADMINpassword
       name: host01.example.com
       update_dns: yes
@@ -303,7 +303,7 @@ Example playbook to ensure a host is absent:
 
   tasks:
   # Ensure host is absent
-  - ipahost:
+  - freeipa.ansible_freeipa.ipahost:
       ipaadmin_password: password1
       name: host01.example.com
       state: absent

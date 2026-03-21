@@ -48,7 +48,7 @@ Example playbook to make sure location "my_location1" is present:
   become: yes
 
   tasks:
-  - ipalocation:
+  - freeipa.ansible_freeipa.ipalocation:
       ipaadmin_password: SomeADMINpassword
       name: my_location1
       description: My Location 1
@@ -64,7 +64,7 @@ Example playbook to make sure location "my_location1" is absent:
   become: yes
 
   tasks:
-  - ipalocation:
+  - freeipa.ansible_freeipa.ipalocation:
       ipaadmin_password: SomeADMINpassword
       name: my_location1
       state: absent

@@ -52,7 +52,7 @@ Example playbook to make sure role is present with all members:
   gather_facts: no
 
   tasks:
-  - iparole:
+  - freeipa.ansible_freeipa.iparole:
       ipaadmin_password: SomeADMINpassword
       name: somerole
       user:
@@ -73,7 +73,7 @@ Example playbook to make sure role is present with all members:
 Example playbook to rename a role:
 
 ```yaml
-- iparole:
+- freeipa.ansible_freeipa.iparole:
     ipaadmin_password: SomeADMINpassword
     name: somerole
     rename: anotherrole
@@ -89,7 +89,7 @@ Example playbook to make sure role is absent:
   gather_facts: no
 
   tasks:
-  - iparole:
+  - freeipa.ansible_freeipa.iparole:
       ipaadmin_password: SomeADMINpassword
       name: somerole
       state: absent
@@ -105,7 +105,7 @@ Example playbook to ensure a user is a member of a role:
   gather_facts: no
 
   tasks:
-  - iparole:
+  - freeipa.ansible_freeipa.iparole:
       ipaadmin_password: SomeADMINpassword
       name: somerole
       user:
@@ -123,7 +123,7 @@ Example playbook to ensure a group is a member of a role:
   gather_facts: no
 
   tasks:
-  - iparole:
+  - freeipa.ansible_freeipa.iparole:
       ipaadmin_password: SomeADMINpassword
       name: somerole
       host:
@@ -141,7 +141,7 @@ Example playbook to ensure a host is a member of a role:
   gather_facts: no
 
   tasks:
-  - iparole:
+  - freeipa.ansible_freeipa.iparole:
       ipaadmin_password: SomeADMINpassword
       name: somerole
       host:
@@ -159,7 +159,7 @@ Example playbook to ensure a hostgroup is a member of a role:
   gather_facts: no
 
   tasks:
-  - iparole:
+  - freeipa.ansible_freeipa.iparole:
       ipaadmin_password: SomeADMINpassword
       name: somerole
       hostgroup:
@@ -177,7 +177,7 @@ Example playbook to ensure a service is a member of a role:
   gather_facts: no
 
   tasks:
-  - iparole:
+  - freeipa.ansible_freeipa.iparole:
       ipaadmin_password: SomeADMINpassword
       name: somerole
       service:
@@ -195,7 +195,7 @@ Example playbook to ensure a privilege is a member of a role:
   gather_facts: no
 
   tasks:
-  - iparole:
+  - freeipa.ansible_freeipa.iparole:
       ipaadmin_password: SomeADMINpassword
       name: somerole
       privilege:
@@ -214,7 +214,7 @@ Example playbook to ensure that different members are not associated with a role
   gather_facts: no
 
   tasks:
-  - iparole:
+  - freeipa.ansible_freeipa.iparole:
       ipaadmin_password: SomeADMINpassword
       name: somerole
       user:

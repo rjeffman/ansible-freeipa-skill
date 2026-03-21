@@ -76,7 +76,7 @@ Example playbook to setup the IPA server using admin and dirman passwords from a
   - playbook_sensitive_data.yml
 
   roles:
-  - role: ipaserver
+  - role: freeipa.ansible_freeipa.ipaserver
     state: present
 ```
 
@@ -89,7 +89,7 @@ Example playbook to unconfigure the IPA server using principal and password from
   become: true
 
   roles:
-  - role: ipaserver
+  - role: freeipa.ansible_freeipa.ipaserver
     state: absent
 ```
 
@@ -115,7 +115,7 @@ Example playbook to setup the IPA server using admin and dirman passwords from i
   become: true
 
   roles:
-  - role: ipaserver
+  - role: freeipa.ansible_freeipa.ipaserver
     state: present
 ```
 
@@ -132,7 +132,7 @@ Server installation step 1: Generate CSR, copy to controller as `<ipaserver host
     ipaserver_external_ca: yes
 
   roles:
-  - role: ipaserver
+  - role: freeipa.ansible_freeipa.ipaserver
     state: present
 
   post_tasks:
@@ -163,7 +163,7 @@ Server installation step 2: Copy `<ipaserver hostname>-chain.crt` to the IPA ser
       force: yes
 
   roles:
-  - role: ipaserver
+  - role: freeipa.ansible_freeipa.ipaserver
     state: present
 ```
 
@@ -206,7 +206,7 @@ Example playbook to remove an IPA server using admin passwords from the domain:
   become: true
 
   roles:
-  - role: ipaserver
+  - role: freeipa.ansible_freeipa.ipaserver
     state: absent
 ```
 

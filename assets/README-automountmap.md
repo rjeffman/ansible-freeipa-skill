@@ -47,7 +47,7 @@ Example playbook to ensure presence of an automount map:
 
   tasks:
   - name: ensure map named auto.DMZ in location DMZ is created
-    ipaautomountmap:
+    freeipa.ansible_freeipa.ipaautomountmap:
       ipaadmin_password: SomeADMINpassword
       name: auto.DMZ
       location: DMZ
@@ -61,7 +61,7 @@ Example playbook to ensure an indirect automount map is present:
 ```yaml
 ---
 - name: Playbook to add an indirect automount map
-  ipaautomountmap:
+  freeipa.ansible_freeipa.ipaautomountmap:
     ipaadmin_password: SomeADMINpassword
     name: auto.indirect
     location: DMZ
@@ -79,7 +79,7 @@ Example playbook to ensure auto.DMZi is absent:
 
   tasks:
   - name: ensure map auto.DMZ has been removed
-    ipaautomountmap:
+    freeipa.ansible_freeipa.ipaautomountmap:
       ipaadmin_password: SomeADMINpassword
       name: auto.DMZ
       location: DMZ

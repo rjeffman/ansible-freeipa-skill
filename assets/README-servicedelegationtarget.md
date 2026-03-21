@@ -51,7 +51,7 @@ Example playbook to make sure servicedelegationtarget delegation-target is prese
 
   tasks:
   - name: Ensure servicedelegationtarget delegation-target is present
-    ipaservicedelegationtarget:
+    freeipa.ansible_freeipa.ipaservicedelegationtarget:
       ipaadmin_password: SomeADMINpassword
       name: delegation-target
 ```
@@ -67,7 +67,7 @@ Example playbook to make sure servicedelegationtarget delegation-target member p
 
   tasks:
   - name: Ensure servicedelegationtarget delegation-target member principal test/example.com is present
-    ipaservicedelegationtarget:
+    freeipa.ansible_freeipa.ipaservicedelegationtarget:
       ipaadmin_password: SomeADMINpassword
       name: delegation-target
       principal: test/example.com
@@ -85,7 +85,7 @@ Example playbook to make sure servicedelegationtarget delegation-target member p
 
   tasks:
   - name: Ensure servicedelegationtarget delegation-target member principal test/example.com is absent
-    ipaservicedelegationtarget:
+    freeipa.ansible_freeipa.ipaservicedelegationtarget:
       ipaadmin_password: SomeADMINpassword
       name: delegation-target
       principal: test/example.com
@@ -105,7 +105,7 @@ Example playbook to make sure servicedelegationtarget delegation-target is absen
 
   tasks:
   - name: Ensure servicedelegationtarget delegation-target is absent
-    ipaservicedelegationtarget:
+    freeipa.ansible_freeipa.ipaservicedelegationtarget:
       ipaadmin_password: SomeADMINpassword
       name: delegation-target
       state: absent

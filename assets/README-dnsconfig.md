@@ -48,7 +48,7 @@ Example playbook to set global DNS configuration:
 
   tasks:
   # Set dnsconfig.
-  - ipadnsconfig:
+  - freeipa.ansible_freeipa.ipadnsconfig:
       forwarders:
         - ip_address: 8.8.4.4
         - ip_address: 2001:4860:4860::8888
@@ -67,7 +67,7 @@ Example playbook to ensure a global forwarder, with a custom port, is absent:
 
   tasks:
   # Ensure global forwarder with a custom port is absent.
-  - ipadnsconfig:
+  - freeipa.ansible_freeipa.ipadnsconfig:
       forwarders:
           - ip_address: 2001:4860:4860::8888
             port: 53
@@ -85,7 +85,7 @@ Example playbook to disable global forwarders:
 
   tasks:
   # Disable global forwarders.
-  - ipadnsconfig:
+  - freeipa.ansible_freeipa.ipadnsconfig:
       forward_policy: none
 ```
 
@@ -99,7 +99,7 @@ Example playbook to change global forward policy:
 
   tasks:
   # Disable global forwarders.
-  - ipadnsconfig:
+  - freeipa.ansible_freeipa.ipadnsconfig:
       forward_policy: first
 ```
 
@@ -113,7 +113,7 @@ Example playbook to disallow synchronization of forward (A, AAAA) and reverse (P
 
   tasks:
   # Disable global forwarders.
-  - ipadnsconfig:
+  - freeipa.ansible_freeipa.ipadnsconfig:
       allow_sync_ptr: no
 ```
 

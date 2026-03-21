@@ -49,7 +49,7 @@ Example playbook to add a topology segment with default name (cn):
 
   tasks:
   - name: Add topology segment
-    ipatopologysegment:
+    freeipa.ansible_freeipa.ipatopologysegment:
       ipaadmin_password: SomeADMINpassword
       suffix: domain
       left: ipareplica1.test.local
@@ -69,7 +69,7 @@ Example playbook to delete a topology segment:
 
   tasks:
   - name: Delete topology segment
-    ipatopologysegment:
+    freeipa.ansible_freeipa.ipatopologysegment:
       ipaadmin_password: SomeADMINpassword
       suffix: domain
       left: ipareplica1.test.local
@@ -89,7 +89,7 @@ Example playbook to reinitialize a topology segment:
 
   tasks:
   - name: Reinitialize topology segment
-    ipatopologysegment:
+    freeipa.ansible_freeipa.ipatopologysegment:
       ipaadmin_password: SomeADMINpassword
       suffix: domain
       left: ipareplica1.test.local
@@ -110,7 +110,7 @@ Example playbook to verify a topology suffix:
 
   tasks:
   - name: Verify topology suffix
-    ipatopologysuffix:
+    freeipa.ansible_freeipa.ipatopologysuffix:
       ipaadmin_password: SomeADMINpassword
       suffix: domain
       state: verified
@@ -135,7 +135,7 @@ Example playbook to add or remove or check or reinitialize a list of topology se
 
   tasks:
   - name: Add topology segment
-    ipatopologysegment:
+    freeipa.ansible_freeipa.ipatopologysegment:
       ipaadmin_password: "{{ ipaadmin_password }}"
       suffix: "{{ item.suffix }}"
       name: "{{ item.name | default(omit) }}"
