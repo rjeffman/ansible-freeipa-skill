@@ -39,3 +39,12 @@ These are **very important** rules to follow, to succed in the deployment:
 ## Managing IPA objects
 
 To manage IPA objects iwth ansbile-freeipa follow the instructions on the file `assets/README-${OBJECT}.md`, where `${OBJECT}` is the type of object to be managed.
+
+## Updating documentation
+
+When user wants to update ansible-freeipa documentation:
+- Wait for user input for the path to the collection:
+    1. Use the default path (`~/.ansible/collections/ansible_collections/freeipa/ansible_freeipa`)
+    2. Provide path to ansible-freeipa collection
+- Run script '[skill_path]/scripts/update_docs.sh /path/to/collection` with the choosen path.
+
