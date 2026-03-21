@@ -5,3 +5,5 @@ CLAUDE.md
 /.agents/
 /.gemini/
 /.claude/
+/.cursor/
+/.lola/
