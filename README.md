@@ -13,38 +13,44 @@ For a nice introduction, greet the agent with "Hello!".
 
 # Installation
 
-Create a directory for your inventories and playbooks and clone this
-repository inside that directory.
+Create a directory for your inventories and playbooks.
+
+You can use [lola](https://github.com/RedHatProductSecurity/lola) to
+install for several agents:
+
+```
+lola mod add https://github.com/rjeffman/ansible-freeipa-skill
+lola install -a <assistant> ansible-freeipa-skill
+```
+
+Or clone this repository inside your skills directory.
 
 For Anthropic's Claude:
 
 ```
-mkdir -p playbooks/.claude/skills
+cd playbooks
+mkdir -p .claude/skills ||:
 git clone https://gitlab.cee.redhat.com/rjeffman/ansible-freeipa-skill \
     playbooks/.claude/skills/ansible-freeipa-skill
-cd playbooks
-claude Hello
+claude /ansible-freeipa-skill
 ```
 
 For Gemini:
 
 ```
+cd playbooks
 mkdir -p playbooks/.agents/skills
 git clone https://gitlab.cee.redhat.com/rjeffman/ansible-freeipa-skill \
     playbooks/.agents/skills/ansible-freeipa-skill
-cd playbooks
-gemini Hello
+gemini /ansible-freeipa-skill
 ```
 
 You can verify the loaded skills by running `/skills` in the AI agent
 shell.
 
-For any agent you can either run `/init` or create a simple AGENT.md
-file with:
+Agents should add this instructions to the initial instructions file:
 
 ```
-# Instructions for AGENT
-
 When starting a session:
 - Load the skills in this directory
 - Greet user and offer help with managing FreeIPA with ansible-freeipa.
