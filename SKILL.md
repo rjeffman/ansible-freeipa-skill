@@ -5,6 +5,7 @@ licensce: GPL-v3.0-or-later
 metadata:
   author: "Rafael Guterres Jeffman <rjeffman@redhat.com>"
   version: 1.16.0
+allowed-tools: Read
 ---
 
 ## Installing ansible-freeipa collection
