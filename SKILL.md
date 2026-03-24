@@ -59,3 +59,64 @@ When user wants to update ansible-freeipa documentation:
     2. Provide path to ansible-freeipa collection
 - Run script '[skill_path]/scripts/update_docs.sh /path/to/collection` with the choosen path.
 
+## Testing the playbooks locally
+
+Although running FreeIPA in a container is not supported, you can test most of the ansible-freeipa modules using a container, running:
+```
+podman run \
+    --rm \
+    --security-opt label=disable \
+    --network bridge:interface_name=eth0 \
+    --systemd true \
+    --memory-swap -1 \
+    --replace \
+    --cap-add DAC_READ_SEARCH \
+    --cap-add SYS_PTRACE \
+    --cap-add AUDIT_WRITE \
+    --cap-add SETUID \
+    --cap-add SETGID \
+    --hostname ipaserver.test.local \
+    --name ipaserver \
+    quay.io/ansible-freeipa/upstream-tests:fedora-latest-server
+```
+
+The hostname for the container is `ipaserver.test.local`
+
+The administrator credentials is usernam `admin`, password `SomeADMINpassword`.
+
+The Directory Manager password is `SomeDMpassword`.
+
+Use the following Ansible directory in this setup:
+```
+[ipaserver]
+ansible-freeipa-tests ansible_connection=podman
+
+[ipaserver:vars]
+ipaadmin_password=SomeADMINpassword
+ipadm_password=SomeDMpassword
+```
+
+You will need Ansible collection `containers.podman`.
+
+### Verifying data in the container
+
+It is **CRITICAL** that before running any of the `ipa` commands below a Kerberos ticket is obtained, **once per session**, with
+
+```
+podman exec ipaserver bash -c "echo 'SomeADMINpassword' | kinit admin
+```
+
+**NEVER** execute `kinit` for all the command line `ipa` calls.
+
+ansible-freeipa does not support data retrieval, so to check if an object exist in the container it is required to execute commands directly on the container.
+
+To find a list of objects, use `[object]-find` command, for example:
+```
+podman exec ipaserver ipa group-find some-group-name
+```
+
+To display data for a single object use `[object]-show --all`, for example:
+```
+podman exec ipaserver ipa service-find http/somehost.somedomain.what@SOMEDOMAIN.WHAT
+```
+
