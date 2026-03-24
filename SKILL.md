@@ -21,24 +21,34 @@ ansible-galaxy collection intsall containers.podman
 
 ## Using a dynamic inventory
 
-To use a dynamic inventory for the Ansible playbooks, follow the instructions on `assets/README-inventory-plugin-freeipa.md`.
+To use a dynamic inventory for the Ansible playbooks, follow the instructions on `references/README-inventory-plugin-freeipa.md`.
 
 ## Creating an IPA deployment
 
 To create an IPA deployment, one must start with an inital server, then install any number of replicas and clients.
 
-To install the initial server follow the instructions found in `assets/README-ipaserver-deployment.md`
-To install a replica follow the instructions found in `assets/README-ipareplica-deployment.md`
-To install a client follow the instructions found in `assets/README-ipaclient-deployment.md`
+To install the initial server follow the instructions found in `references/README-ipaserver-role.md`
+To install a replica follow the instructions found in `references/README-ipareplica-role.md`
+To install a client follow the instructions found in `references/README-ipaclient-role.md`
 
 These are **very important** rules to follow, to succed in the deployment:
 - **Always** set ipaadmin_password and ipadm_password in the inventory file for the ipaserver deployment.
 - **Always** set ipaadmin_password in the inventory file for the ipareplica and ipaclient deployments.
 - Ensure that `getent ahosts $HOSTNAME` return a single IPv4 and, at most, one IPv6 address.
 
+## IPA Backup
+
+All information about using ansible-freeipa for backup/restore data is in `references/README-ipabackup-role.md`
+
+## Smartcard setup
+
+To install the smartcard server side, follow the instructions found in `references/README-ipasmartcard_server-role.md`.
+
+To install the smartcard client, follow the instructions found in `references/README-ipasmartcard_client-role.md`
+
 ## Managing IPA objects
 
-To manage IPA objects iwth ansbile-freeipa follow the instructions on the file `assets/README-${OBJECT}.md`, where `${OBJECT}` is the type of object to be managed.
+To manage IPA objects with ansible-freeipa follow the instructions on the file `references/README-${OBJECT}.md`, where `${OBJECT}` is the type of object to be managed.
 
 ## Updating documentation
 
