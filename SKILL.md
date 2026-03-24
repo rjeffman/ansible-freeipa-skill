@@ -1,6 +1,6 @@
 ---
 name: ansible-freeipa-skill
-description: Used to optimize the creation of Ansible playbooks that use the ansible-freeipa collection to manage FreeIPA deployments.
+description: Create and test Ansible playbooks and inventories that use the ansible-freeipa collection to manage or deploy FreeIPA realms. Use also to create a testing ansible-freeipa environment based on containers.
 licensce: GPL-v3.0-or-later
 metadata:
   author: "Rafael Guterres Jeffman <rjeffman@redhat.com>"
